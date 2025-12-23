@@ -30,16 +30,12 @@ Para que el sitio funcione correctamente en Vercel, necesitas configurar las sig
 
 ## Build Configuration
 
-El proyecto usa los siguientes comandos:
-- **Build Command:** `npm run build`
-- **Output Directory:** `.vercel/output`
-- **Install Command:** `npm install --legacy-peer-deps`
+El proyecto incluye un archivo `.npmrc` que configura automáticamente `legacy-peer-deps=true`, por lo que Vercel usará automáticamente esta opción durante la instalación.
 
-### Importante
-Si tienes problemas con el deployment en Vercel, asegúrate de que el comando de instalación use `--legacy-peer-deps`:
-
-En Vercel Dashboard → Settings → General → Build & Development Settings:
-- Install Command: `npm install --legacy-peer-deps`
+Comandos de build:
+- **Build Command:** `npm run build` (ya configurado en vercel.json)
+- **Output Directory:** `.vercel/output` (automático con Astro + Vercel adapter)
+- **Install Command:** `npm install` (automáticamente usa --legacy-peer-deps por el .npmrc)
 
 ## Redeploy
 
