@@ -4,29 +4,18 @@ Este proyecto está configurado para deployarse en Vercel con las siguientes con
 
 ## Variables de Entorno en Vercel
 
-Para que el sitio funcione correctamente en Vercel, necesitas configurar las siguientes variables de entorno:
+**IMPORTANTE: NO configures las variables de TinaCMS en Vercel**
 
-### TinaCMS Configuration (Opcional)
+El sitio funciona correctamente SIN las variables de entorno de TinaCMS. Solo necesitas configurarlas si planeas usar el editor de TinaCMS en tu entorno local.
 
-**Nota:** El editor de TinaCMS requiere estas variables solo si planeas usar el CMS en vivo. El sitio se puede deployar sin ellas.
+### Variables NO Requeridas (Solo para desarrollo local)
 
-1. **NEXT_PUBLIC_TINA_CLIENT_ID**
-   - Valor: `39607bbb-7596-4df1-8086-382f4ad2f959`
-   - Descripción: Client ID de TinaCMS
-   - Ambiente: Production, Preview, Development
+Si quieres usar el editor de TinaCMS localmente, configura estas variables solo en tu archivo `.env` local:
 
-2. **TINA_TOKEN**
-   - Valor: `19263f4821f6a1736e836962c01fc193780ad90f`
-   - Descripción: Token de TinaCMS
-   - Ambiente: Production, Preview, Development
+- `NEXT_PUBLIC_TINA_CLIENT_ID` = Tu Client ID de TinaCMS
+- `TINA_TOKEN` = Tu Token de TinaCMS
 
-## Cómo Configurar en Vercel
-
-1. Ve a tu proyecto en Vercel Dashboard
-2. Navega a Settings → Environment Variables
-3. Agrega cada variable con su valor correspondiente
-4. Selecciona los ambientes (Production, Preview, Development) para cada variable
-5. Guarda los cambios
+**No agregues estas variables en Vercel Dashboard.**
 
 ## Build Configuration
 
