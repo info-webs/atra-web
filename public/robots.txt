@@ -1,0 +1,10 @@
+# robots.txt for atrayobesidad.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://atrayobesidad.com/sitemap.xml
+
+# Disallow admin or private areas (if any in the future)
+# Disallow: /admin/

@@ -1,33 +1,331 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeaderPresentation from "../components/presentation/header"
-import FeaturePresentation from "../components/presentation/feature"
-import LogosPresentation from "../components/presentation/logos"
-import DevFreePresentation from "../components/presentation/developerFree"
-import PalettePresentationFree from "../components/presentation/palette"
-import CodePresentation from "../components/presentation/code"
-import FreeToProPresentation from "../components/presentation/freeToPro"
-import AstroPresentation from "../components/presentation/astro"
-import PagesFreePresentation from "../components/presentation/pagesFree"
-import GithubPresentation from "../components/presentation/github"
-import PricingPresentation from "../components/presentation/pricing"
-import FooterFreePresentation from "../components/presentation/footerFree"
-
+import Header from '../components/atra/Header';
+import Footer from '../components/atra/Footer';
+import WhatsAppButton from '../components/atra/WhatsAppButton';
 ---
 
-<Layout title="Presentation Page">
-	<main>
-    <HeaderPresentation client:only="react" />
-    <FeaturePresentation client:only="react" />
-    <LogosPresentation client:only="react" />
-    <DevFreePresentation client:only="react" />
-    <PalettePresentationFree client:only="react" />
-    <CodePresentation client:only="react" />
-    <FreeToProPresentation client:only="react" />
-    <AstroPresentation client:only="react" />
-    <PagesFreePresentation client:only="react" />
-    <PricingPresentation client:only="react" />
-    <GithubPresentation client:only="react" />
-    <FooterFreePresentation client:only="react" />
+<Layout
+  title="ATRA y Obesidad Salamanca - Apoyo a familias con TCA"
+  metaDescription="Asociación de apoyo a familias afectadas por TCA y obesidad en Salamanca. No estás solo, la recuperación es posible. Ofrecemos grupos de ayuda, terapia y actividades."
+>
+  <Header client:load />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <div class="absolute inset-0 bg-black opacity-10"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6">
+            No estás solo/a
+          </h1>
+          <p class="mt-6 text-xl sm:text-2xl text-primary-100 max-w-3xl mx-auto">
+            Somos familias ayudando a familias en la lucha contra los TCA y la obesidad
+          </p>
+          <p class="mt-4 text-lg text-primary-200 max-w-2xl mx-auto">
+            La recuperación es posible. Aquí encontrarás apoyo, comprensión y esperanza.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="/contacto"
+              class="inline-flex items-center rounded-md bg-white px-8 py-3 text-lg font-semibold text-primary-700 shadow-lg hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 transition-all duration-200"
+            >
+              Necesito ayuda
+            </a>
+            <a
+              href="tel:+34622927474"
+              class="inline-flex items-center rounded-md bg-primary-500 px-8 py-3 text-lg font-semibold text-white shadow-lg hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 transition-all duration-200"
+            >
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Llámanos: 622 927 474
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Contact Banner -->
+    <section class="bg-danger text-white py-4">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
+          <div class="flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <span class="font-semibold">¿Necesitas ayuda urgente?</span>
+          </div>
+          <span>Teléfono de Emergencias: 024 (Atención a la conducta suicida)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="py-16 sm:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl mb-6">
+              Entendemos lo que estás viviendo
+            </h2>
+            <p class="text-lg text-neutral-600 mb-4">
+              ATRA y Obesidad Salamanca es una asociación formada por familias que han vivido
+              o están viviendo la experiencia de los trastornos de conducta alimentaria y la obesidad.
+            </p>
+            <p class="text-lg text-neutral-600 mb-6">
+              Sabemos que no es fácil, pero también sabemos que <strong class="text-primary-700">la recuperación
+              es posible</strong>. Nuestro objetivo es acompañarte en este camino, ofreciendo apoyo,
+              comprensión y herramientas para afrontar estos trastornos.
+            </p>
+            <a
+              href="/quienes-somos"
+              class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold"
+            >
+              Conoce nuestra historia
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div class="mt-10 lg:mt-0">
+            <div class="rounded-lg bg-primary-50 p-8">
+              <h3 class="text-xl font-bold text-primary-900 mb-4">Nuestros valores</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-neutral-700">Empatía y comprensión sin juicio</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-neutral-700">Apoyo entre familias que lo han vivido</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-neutral-700">Esperanza en la recuperación</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-neutral-700">Espacio seguro y confidencial</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Highlight -->
+    <section class="py-16 sm:py-24 bg-neutral-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl mb-4">
+            ¿Cómo podemos ayudarte?
+          </h2>
+          <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+            Ofrecemos diferentes actividades y servicios para acompañarte en tu proceso de recuperación
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Grupo de Apoyo Familias -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Grupo de Apoyo para Familias</h3>
+            <p class="text-neutral-600 mb-4">
+              Encuentros semanales donde compartir experiencias y aprender de otras familias que están pasando por lo mismo.
+            </p>
+            <p class="text-sm text-primary-600 font-semibold">Martes 18:00h</p>
+          </div>
+
+          <!-- Grupo de Apoyo Afectados -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+            <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Grupo de Apoyo para Afectados</h3>
+            <p class="text-neutral-600 mb-4">
+              Espacio seguro para personas que están luchando contra un TCA o la obesidad, donde encontrar comprensión y apoyo.
+            </p>
+            <p class="text-sm text-secondary-600 font-semibold">Jueves 18:00h</p>
+          </div>
+
+          <!-- Terapia -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+            <div class="w-12 h-12 bg-accent-teal/10 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-accent-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Terapia Psicológica</h3>
+            <p class="text-neutral-600 mb-4">
+              Atención psicológica especializada en TCA y obesidad, tanto individual como familiar.
+            </p>
+            <p class="text-sm text-accent-teal font-semibold">Cita previa</p>
+          </div>
+
+          <!-- Asesoramiento Nutricional -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+            <div class="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Asesoramiento Nutricional</h3>
+            <p class="text-neutral-600 mb-4">
+              Orientación nutricional personalizada con enfoque en la recuperación y el bienestar.
+            </p>
+            <p class="text-sm text-success font-semibold">Cita previa</p>
+          </div>
+
+          <!-- Actividades Terapéuticas -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+            <div class="w-12 h-12 bg-warning/10 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Actividades Terapéuticas</h3>
+            <p class="text-neutral-600 mb-4">
+              Talleres, actividades de ocio y encuentros que complementan el tratamiento y fomentan el bienestar.
+            </p>
+            <p class="text-sm text-warning font-semibold">Consultar calendario</p>
+          </div>
+
+          <!-- Información y Sensibilización -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+            <div class="w-12 h-12 bg-info/10 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-info" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Información y Sensibilización</h3>
+            <p class="text-neutral-600 mb-4">
+              Charlas, talleres y materiales educativos sobre TCA y obesidad para familias, profesionales y comunidad.
+            </p>
+            <p class="text-sm text-info font-semibold">Próximas fechas</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="/actividades"
+            class="inline-flex items-center rounded-md bg-primary-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200"
+          >
+            Ver todas las actividades
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TCA Preview -->
+    <section class="py-16 sm:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+          <div class="order-2 lg:order-1 mt-10 lg:mt-0">
+            <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-8">
+              <h3 class="text-2xl font-bold text-neutral-900 mb-6">¿Qué son los TCA?</h3>
+              <p class="text-neutral-700 mb-4">
+                Los Trastornos de la Conducta Alimentaria son problemas complejos que van mucho
+                más allá de la comida. Son como un iceberg: lo que se ve es solo una pequeña parte.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <span class="text-primary-600 mr-2">•</span>
+                  <span class="text-neutral-700">Anorexia nerviosa</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-primary-600 mr-2">•</span>
+                  <span class="text-neutral-700">Bulimia nerviosa</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-primary-600 mr-2">•</span>
+                  <span class="text-neutral-700">Trastorno por atracón</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-primary-600 mr-2">•</span>
+                  <span class="text-neutral-700">Obesidad</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <h2 class="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl mb-6">
+              Entender para ayudar
+            </h2>
+            <p class="text-lg text-neutral-600 mb-4">
+              Los TCA afectan a personas de todas las edades, géneros y condiciones. No son una elección,
+              son enfermedades graves que requieren tratamiento profesional.
+            </p>
+            <p class="text-lg text-neutral-600 mb-6">
+              Cuanto antes se detecten y se intervenga, mejores serán los resultados.
+              Por eso es fundamental conocer las señales de alerta y buscar ayuda profesional.
+            </p>
+            <a
+              href="/trastornos-conducta-alimentaria"
+              class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold"
+            >
+              Conoce más sobre los TCA
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-primary-600 to-secondary-600 py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-white mb-4">
+            ¿Necesitas apoyo? Estamos aquí para ti
+          </h2>
+          <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            No importa en qué punto del camino estés, siempre hay esperanza.
+            Contacta con nosotros y te acompañaremos.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contacto"
+              class="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-lg font-semibold text-primary-700 shadow-lg hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 transition-all duration-200"
+            >
+              Contacta con nosotros
+            </a>
+            <a
+              href="tel:+34622927474"
+              class="inline-flex items-center justify-center rounded-md border-2 border-white px-8 py-3 text-lg font-semibold text-white hover:bg-white hover:text-primary-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 transition-all duration-200"
+            >
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Llámanos ahora
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <Footer client:load />
+  <WhatsAppButton client:load />
 </Layout>

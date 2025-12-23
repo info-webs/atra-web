@@ -1,0 +1,419 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/atra/Header';
+import Footer from '../components/atra/Footer';
+import WhatsAppButton from '../components/atra/WhatsAppButton';
+---
+
+<Layout
+  title="¿Qué son los TCA? - ATRA y Obesidad Salamanca"
+  metaDescription="Información completa sobre los Trastornos de la Conducta Alimentaria: anorexia, bulimia, atracón y obesidad. Señales de alerta y cómo buscar ayuda."
+>
+  <Header client:load />
+
+  <main>
+    <!--Hero -->
+    <section class="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
+            ¿Qué son los TCA?
+          </h1>
+          <p class="text-xl text-primary-100 max-w-3xl mx-auto">
+            Entender los Trastornos de la Conducta Alimentaria es el primer paso para la recuperación
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Definición -->
+    <section class="py-16 sm:py-24 bg-white">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-neutral-900 mb-6">
+          Los TCA son mucho más que un problema con la comida
+        </h2>
+        <div class="prose prose-lg max-w-none text-neutral-600">
+          <p class="mb-4">
+            Los <strong class="text-primary-700">Trastornos de la Conducta Alimentaria (TCA)</strong> son
+            problemas psicológicos graves que se manifiestan a través de una relación problemática con
+            la comida, el peso y la imagen corporal.
+          </p>
+          <p class="mb-4">
+            <strong>No son una elección</strong>, no son un capricho ni una fase. Son enfermedades mentales
+            complejas que requieren tratamiento profesional multidisciplinar.
+          </p>
+          <p class="mb-4">
+            Los TCA afectan a personas de todas las edades, géneros, culturas y condiciones socioeconómicas.
+            Aunque son más frecuentes en mujeres adolescentes y jóvenes adultas, cada vez se diagnostican
+            más casos en hombres y en otras franjas de edad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- El iceberg -->
+    <section class="py-16 sm:py-24 bg-gradient-to-br from-primary-50 to-secondary-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-neutral-900 mb-4">
+            Los TCA son como un iceberg
+          </h2>
+          <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+            Lo que se ve (los síntomas alimentarios) es solo una pequeña parte del problema
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 md:p-12 max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <div class="bg-primary-100 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-bold text-primary-900 mb-4 flex items-center">
+                  <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  Lo que se ve (10%)
+                </h3>
+                <ul class="space-y-2 text-neutral-700">
+                  <li class="flex items-start">
+                    <span class="text-primary-600 mr-2">•</span>
+                    Restricción alimentaria
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary-600 mr-2">•</span>
+                    Atracones
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary-600 mr-2">•</span>
+                    Vómitos o purgas
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary-600 mr-2">•</span>
+                    Ejercicio excesivo
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary-600 mr-2">•</span>
+                    Cambios de peso
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary-600 mr-2">•</span>
+                    Obsesión con calorías
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div class="bg-secondary-100 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-secondary-900 mb-4 flex items-center">
+                  <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Lo que no se ve (90%)
+                </h3>
+                <ul class="space-y-2 text-neutral-700">
+                  <li class="flex items-start">
+                    <span class="text-secondary-600 mr-2">•</span>
+                    Baja autoestima
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-secondary-600 mr-2">•</span>
+                    Perfeccionismo extremo
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-secondary-600 mr-2">•</span>
+                    Miedo al rechazo
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-secondary-600 mr-2">•</span>
+                    Necesidad de control
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-secondary-600 mr-2">•</span>
+                    Ansiedad y depresión
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-secondary-600 mr-2">•</span>
+                    Dificultades emocionales
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-secondary-600 mr-2">•</span>
+                    Problemas de relación
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-secondary-600 mr-2">•</span>
+                    Distorsión de la imagen corporal
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-warning/10 border-l-4 border-warning rounded p-6">
+            <p class="text-neutral-700">
+              <strong class="text-warning">Importante:</strong> Tratar solo los síntomas visibles
+              (la comida, el peso) sin abordar los problemas subyacentes no lleva a una recuperación duradera.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipos de TCA -->
+    <section class="py-16 sm:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-neutral-900 mb-4">Tipos de TCA</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <!-- Anorexia -->
+          <div class="bg-neutral-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">Anorexia Nerviosa</h3>
+            <p class="text-neutral-600 mb-4">
+              Se caracteriza por una restricción severa de la ingesta de alimentos, miedo intenso a
+              ganar peso y una alteración significativa de la percepción del peso o la forma del cuerpo.
+            </p>
+            <p class="text-sm text-neutral-500">
+              Las personas con anorexia pueden verse con sobrepeso aunque estén peligrosamente delgadas.
+            </p>
+          </div>
+
+          <!-- Bulimia -->
+          <div class="bg-neutral-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">Bulimia Nerviosa</h3>
+            <p class="text-neutral-600 mb-4">
+              Se caracteriza por episodios recurrentes de atracones seguidos de conductas compensatorias
+              inapropiadas (vómitos, laxantes, ejercicio excesivo) para prevenir el aumento de peso.
+            </p>
+            <p class="text-sm text-neutral-500">
+              Suele ir acompañada de sentimientos intensos de vergüenza y culpa.
+            </p>
+          </div>
+
+          <!-- Atracón -->
+          <div class="bg-neutral-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">Trastorno por Atracón</h3>
+            <p class="text-neutral-600 mb-4">
+              Episodios recurrentes de ingesta excesiva de alimentos en un corto período de tiempo,
+              acompañados de sensación de pérdida de control, pero sin conductas compensatorias regulares.
+            </p>
+            <p class="text-sm text-neutral-500">
+              Genera un gran malestar psicológico y suele derivar en problemas de sobrepeso u obesidad.
+            </p>
+          </div>
+
+          <!-- Obesidad -->
+          <div class="bg-neutral-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">Obesidad</h3>
+            <p class="text-neutral-600 mb-4">
+              Aunque no es un TCA en sí misma, en muchos casos está vinculada a problemas emocionales
+              y de conducta alimentaria que requieren abordaje psicológico junto al médico y nutricional.
+            </p>
+            <p class="text-sm text-neutral-500">
+              La obesidad puede tener un fuerte impacto emocional y social que merece atención y apoyo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Señales de alerta -->
+    <section class="py-16 sm:py-24 bg-danger/5">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-neutral-900 mb-4">Señales de Alerta</h2>
+          <p class="text-lg text-neutral-600">
+            Es importante detectar los TCA lo antes posible. Estas son algunas señales de alerta:
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-bold text-neutral-900 mb-4 flex items-center">
+                <svg class="w-5 h-5 text-danger mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                Conductas alimentarias
+              </h3>
+              <ul class="space-y-2 text-neutral-600">
+                <li>• Cambios drásticos en la alimentación</li>
+                <li>• Evitar comer con la familia</li>
+                <li>• Preocupación excesiva por calorías</li>
+                <li>• Rituales extraños con la comida</li>
+                <li>• Ir al baño inmediatamente después de comer</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-neutral-900 mb-4 flex items-center">
+                <svg class="w-5 h-5 text-danger mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                Cambios emocionales
+              </h3>
+              <ul class="space-y-2 text-neutral-600">
+                <li>• Irritabilidad y cambios de humor</li>
+                <li>• Aislamiento social</li>
+                <li>• Depresión o ansiedad</li>
+                <li>• Perfeccionismo extremo</li>
+                <li>• Baja autoestima</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-neutral-900 mb-4 flex items-center">
+                <svg class="w-5 h-5 text-danger mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                Cambios físicos
+              </h3>
+              <ul class="space-y-2 text-neutral-600">
+                <li>• Pérdida o ganancia significativa de peso</li>
+                <li>• Fatiga constante</li>
+                <li>• Mareos o desmayos</li>
+                <li>• Problemas digestivos</li>
+                <li>• Alteraciones menstruales</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-neutral-900 mb-4 flex items-center">
+                <svg class="w-5 h-5 text-danger mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                Obsesión con el cuerpo
+              </h3>
+              <ul class="space-y-2 text-neutral-600">
+                <li>• Pesarse constantemente</li>
+                <li>• Mirarse excesivamente al espejo</li>
+                <li>• Comentarios negativos sobre su cuerpo</li>
+                <li>• Comparación constante con otros</li>
+                <li>• Ejercicio físico compulsivo</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-danger/10 border-l-4 border-danger rounded p-6">
+            <p class="font-semibold text-neutral-900 mb-2">
+              ¿Reconoces estas señales en ti o en un ser querido?
+            </p>
+            <p class="text-neutral-700 mb-4">
+              No esperes. Cuanto antes se busque ayuda profesional, mejores serán los resultados de la recuperación.
+            </p>
+            <a
+              href="/contacto"
+              class="inline-flex items-center text-danger hover:text-danger/80 font-semibold"
+            >
+              Contacta con nosotros
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mitos y Realidades -->
+    <section class="py-16 sm:py-24 bg-white">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-neutral-900 mb-4">Mitos y Realidades</h2>
+          <p class="text-lg text-neutral-600">
+            Desmontando ideas erróneas sobre los TCA
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-neutral-50 rounded-lg p-6">
+            <div class="flex items-start mb-3">
+              <span class="bg-danger text-white text-sm font-bold px-3 py-1 rounded mr-3">MITO</span>
+              <p class="text-neutral-900 font-semibold">Los TCA son solo cosa de chicas adolescentes</p>
+            </div>
+            <div class="flex items-start ml-16">
+              <span class="bg-success text-white text-sm font-bold px-3 py-1 rounded mr-3">REALIDAD</span>
+              <p class="text-neutral-600">
+                Los TCA afectan a personas de cualquier edad, género y condición social. Cada vez
+                se diagnostican más casos en hombres, niños y personas mayores.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-neutral-50 rounded-lg p-6">
+            <div class="flex items-start mb-3">
+              <span class="bg-danger text-white text-sm font-bold px-3 py-1 rounded mr-3">MITO</span>
+              <p class="text-neutral-900 font-semibold">Es solo una fase o una llamada de atención</p>
+            </div>
+            <div class="flex items-start ml-16">
+              <span class="bg-success text-white text-sm font-bold px-3 py-1 rounded mr-3">REALIDAD</span>
+              <p class="text-neutral-600">
+                Los TCA son enfermedades mentales graves que requieren tratamiento profesional.
+                No son una elección ni un capricho.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-neutral-50 rounded-lg p-6">
+            <div class="flex items-start mb-3">
+              <span class="bg-danger text-white text-sm font-bold px-3 py-1 rounded mr-3">MITO</span>
+              <p class="text-neutral-900 font-semibold">Si come, ya está curada</p>
+            </div>
+            <div class="flex items-start ml-16">
+              <span class="bg-success text-white text-sm font-bold px-3 py-1 rounded mr-3">REALIDAD</span>
+              <p class="text-neutral-600">
+                La recuperación va mucho más allá de normalizar la alimentación. Implica trabajar
+                aspectos emocionales, psicológicos y relacionales profundos.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-neutral-50 rounded-lg p-6">
+            <div class="flex items-start mb-3">
+              <span class="bg-danger text-white text-sm font-bold px-3 py-1 rounded mr-3">MITO</span>
+              <p class="text-neutral-900 font-semibold">Solo afecta a personas delgadas</p>
+            </div>
+            <div class="flex items-start ml-16">
+              <span class="bg-success text-white text-sm font-bold px-3 py-1 rounded mr-3">REALIDAD</span>
+              <p class="text-neutral-600">
+                Los TCA pueden darse en personas de cualquier peso y complexión. No se puede
+                diagnosticar un TCA solo por la apariencia física.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-primary-600 py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          La recuperación es posible
+        </h2>
+        <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          Si necesitas ayuda o información, no dudes en contactar con nosotros.
+          Estamos aquí para acompañarte.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contacto"
+            class="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-lg font-semibold text-primary-700 shadow-lg hover:bg-primary-50 transition-all duration-200"
+          >
+            Contacta con nosotros
+          </a>
+          <a
+            href="/actividades"
+            class="inline-flex items-center justify-center rounded-md border-2 border-white px-8 py-3 text-lg font-semibold text-white hover:bg-white hover:text-primary-700 transition-all duration-200"
+          >
+            Ver nuestras actividades
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:load />
+  <WhatsAppButton client:load />
+</Layout>

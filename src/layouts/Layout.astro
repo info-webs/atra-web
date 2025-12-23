@@ -2,59 +2,106 @@
 export interface Props {
   title: string;
   metaDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  canonical?: string;
 }
 
-const { title, metaDescription } = Astro.props;
+const {
+  title,
+  metaDescription = "ATRA y Obesidad Salamanca - Asociación de apoyo a familias afectadas por TCA y obesidad",
+  ogImage = "/logo.png",
+  ogType = "website",
+  canonical
+} = Astro.props;
+
+const siteUrl = "https://atrayobesidad.com";
+const fullCanonical = canonical || `${siteUrl}${Astro.url.pathname}`;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto+Sans:300,400,500,600,700,800|PT+Mono:300,400,500,600,700"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto+Sans:300,400,500,600,700,800&display=swap"
       rel="stylesheet"
     />
-    <title>{title} by Creative Tim</title>
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
     <meta name="description" content={metaDescription} />
+    <meta name="keywords" content="TCA, trastornos alimentarios, obesidad, anorexia, bulimia, atracón, ayuda TCA, Salamanca, apoyo familias, recuperación TCA" />
+    <meta name="author" content="ATRA y Obesidad Salamanca" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="canonical" href="https://www.creative-tim.com/astro/" />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-NKDMSK6");
-    </script>
-    <!-- End Google Tag Manager -->
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={fullCanonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="ATRA y Obesidad Salamanca" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={fullCanonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={metaDescription} />
+    <meta property="twitter:image" content={fullOgImage} />
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "ATRA y Obesidad Salamanca",
+      "description": "Asociación de apoyo a familias afectadas por TCA y obesidad",
+      "url": siteUrl,
+      "logo": `${siteUrl}/logo.png`,
+      "telephone": "+34622927474",
+      "email": "atrayobesidad@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Paseo del Gran Capitán 53, planta 2, despacho 26",
+        "addressLocality": "Salamanca",
+        "postalCode": "37001",
+        "addressCountry": "ES"
+      },
+      "sameAs": [
+        "https://www.instagram.com/atrayobesidadsa/",
+        "https://www.facebook.com/p/ATRA-Y-Obesidad-100063570494244/"
+      ]
+    })} />
   </head>
-  <body class="overflow-x-hidden">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden">
-      </iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <body class="overflow-x-hidden bg-neutral-50 text-neutral-800">
     <slot />
   </body>
   <script
     src="https://kit.fontawesome.com/349ee9c857.js"
-    crossOrigin="anonymous"
+    crossorigin="anonymous"
   ></script>
 </html>
 <style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Open Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', 'Open Sans', sans-serif;
+  }
+
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
