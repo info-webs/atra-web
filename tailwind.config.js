@@ -61,7 +61,16 @@ module.exports = withMT({
         sans: ['Open Sans', 'system-ui', 'sans-serif'],
         heading: ['Noto Sans', 'Open Sans', 'sans-serif'],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 });

@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import BlogCard from '../../components/blog/BlogCard';
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
+
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const categories = ['Todos', 'TCA', 'Obesidad', 'Familia', 'Eventos', 'Recursos', 'Testimonios', 'Noticias'];
+---
+
+<Layout title="Blog - ATRA y Obesidad Salamanca" metaDescription="Recursos, información y experiencias sobre TCA y obesidad">
+  <main class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-primary-700 text-white py-20">
+      <div class="container mx-auto px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto">
+          Recursos, información y experiencias sobre TCA y obesidad
+        </p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="container mx-auto px-8 py-8">
+      <div class="flex flex-wrap gap-3 justify-center">
+        {categories.map(cat => (
+          <button
+            class="px-6 py-2 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-200 filter-btn"
+            data-category={cat}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="container mx-auto px-8 pb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+        {sortedPosts.map(post => (
+          <BlogCard post={post} client:load />
+        ))}
+      </div>
+
+      {sortedPosts.length === 0 && (
+        <div class="text-center py-20">
+          <p class="text-gray-500 text-lg">
+            Próximamente publicaremos nuestros primeros artículos
+          </p>
+        </div>
+      )}
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gray-50 py-16">
+      <div class="container mx-auto px-8 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          ¿Necesitas ayuda o más información?
+        </h2>
+        <p class="text-gray-700 mb-8 max-w-2xl mx-auto">
+          Estamos aquí para escucharte y orientarte. No dudes en contactarnos.
+        </p>
+        <a
+          href="/contacto"
+          class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors"
+        >
+          Contacta con nosotros
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Filtrado de posts por categoría
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const blogCards = document.querySelectorAll('[data-category]');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.getAttribute('data-category');
+
+          // Update active button
+          filterBtns.forEach(b => b.classList.remove('bg-primary', 'text-white'));
+          btn.classList.add('bg-primary', 'text-white');
+
+          // Filter cards
+          blogCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            if (category === 'Todos' || cardCategory === category) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</Layout>
